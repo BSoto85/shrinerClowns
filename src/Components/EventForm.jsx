@@ -2,49 +2,54 @@ import React from "react";
 
 const EventForm = () => {
   return (
-    <div>
-      <h2>Book an Event</h2>
-      <form>
-        <div class="mb-3">
-          <label for="email" class="form-label">
-            Email address
-          </label>
-          <input type="email" class="form-control" id="email" />
-        </div>
-        <div class="mb-3">
-          <label for="first-name" class="form-label">
-            First Name
-          </label>
-          <input type="first-name" class="form-control" id="first-name" />
-        </div>
-        <div class="mb-3">
-          <label for="last-name" class="form-label">
-            Last Name
-          </label>
-          <input type="last-name" class="form-control" id="last-name" />
-        </div>
-        <div class="mb-3">
-          <label for="event" class="form-label">
-            Event
-          </label>
-          <input type="event" class="form-control" id="event" />
-        </div>
-        <div class="mb-3">
-          <label for="event-address" class="form-label">
-            Event Address
-          </label>
-          <input type="event-address" class="form-control" id="event-address" />
-        </div>
-        <div class="mb-3">
-          <label for="event-date" class="form-label">
-            Event Date
-          </label>
-          <input type="date" class="form-control" id="event-date" />
-        </div>
-        <button type="submit" class="btn btn-primary">
-          Submit
-        </button>
-      </form>
+    <div className="container d-flex justify-content-center" id="form">
+      <div
+        className="w-60 border border-1 border-dark p-4 rounded"
+        style={{ width: "60%", marginTop: "50px", marginBottom: "50px" }}
+      >
+        <h2 className="text-center">Booking Inqueries</h2>
+        <form>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">
+              Email address
+            </label>
+            <input type="email" className="form-control" id="email" />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="first-name" className="form-label">
+              First Name
+            </label>
+            <input type="text" className="form-control" id="first-name" />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="last-name" className="form-label">
+              Last Name
+            </label>
+            <input type="text" className="form-control" id="last-name" />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="event" className="form-label">
+              Event
+            </label>
+            <input type="text" className="form-control" id="event" />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="event-address" className="form-label">
+              Event Address
+            </label>
+            <input type="text" className="form-control" id="event-address" />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="event-date" className="form-label">
+              Event Date
+            </label>
+            <input type="date" className="form-control" id="event-date" />
+          </div>
+          <button type="submit" className="btn btn-primary w-100">
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

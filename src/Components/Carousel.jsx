@@ -1,40 +1,59 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const Carousel = () => {
   return (
     <div
       id="carouselExampleAutoplaying"
-      class="carousel slide"
+      className="carousel slide w-75 mx-auto"
       data-bs-ride="carousel"
+      data-bs-interval="4000" // Slides every 3 seconds
     >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="..." class="d-block w-100" alt="..." />
+      <h2>Gallery</h2>
+      <div className="carousel-inner">
+        <div className="carousel-item active" style={{ height: "700px" }}>
+          <img
+            src="src/assets/klowns1.jpeg"
+            className="d-block w-100 h-100"
+            alt="..."
+            style={{ objectFit: "cover" }}
+          />
         </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="..." />
+        <div className="carousel-item" style={{ height: "700px" }}>
+          <img
+            src="src/assets/klowns2.jpeg"
+            className="d-block w-100 h-100"
+            alt="..."
+            style={{ objectFit: "cover" }}
+          />
         </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="..." />
+        <div className="carousel-item" style={{ height: "700px" }}>
+          <img
+            src="src/assets/klowns3.jpeg"
+            className="d-block w-100 h-100"
+            alt="..."
+            style={{ objectFit: "cover" }}
+          />
         </div>
       </div>
       <button
-        class="carousel-control-prev"
+        className="carousel-control-prev"
         type="button"
         data-bs-target="#carouselExampleAutoplaying"
         data-bs-slide="prev"
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
       </button>
       <button
-        class="carousel-control-next"
+        className="carousel-control-next"
         type="button"
         data-bs-target="#carouselExampleAutoplaying"
         data-bs-slide="next"
       >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
       </button>
     </div>
   );
