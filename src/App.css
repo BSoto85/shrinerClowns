@@ -1,3 +1,12 @@
+body {
+  background: url("https://res.cloudinary.com/dnqfg86zq/image/upload/v1740975373/jaqvhtimccf8csixnt02.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .klowns-container {
   display: flex;
   justify-content: center;
@@ -11,15 +20,34 @@
   margin-bottom: 30px;
 }
 
+.klowns-container h3 {
+  margin-bottom: 30px;
+}
+
 .klowns {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 75%;
   text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.carousel h2 {
+.carousel-container {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+.carousel-container h2 {
+  margin-bottom: 50px;
+}
+
+img {
+  border-radius: 5px;
+}
+
+nav {
+  background-color: deeppink;
 }

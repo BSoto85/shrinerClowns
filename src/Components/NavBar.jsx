@@ -6,7 +6,7 @@ const NavBar = () => {
       <div className="container-fluid">
         {/* Navbar Brand on the Left */}
         <a className="navbar-brand" href="#">
-          Navbar
+          <img src="src/assets/klownlogo.png" alt="Klowns Logo" />
         </a>
 
         {/* Navbar Toggler Button for Mobile */}
@@ -35,11 +35,11 @@ const NavBar = () => {
                 Gallery
               </a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link" href="#form">
                 Book the Klowns
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
