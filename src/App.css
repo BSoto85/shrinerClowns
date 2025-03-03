@@ -16,6 +16,12 @@ body {
   flex-direction: column;
 }
 
+@media (max-width: 450px) {
+  .klowns {
+    flex-direction: column;
+  }
+}
+
 .klowns-container h2 {
   margin-bottom: 30px;
 }
