@@ -14,9 +14,9 @@ const EventForm = () => {
     e.preventDefault();
 
     // Your EmailJS Service Details
-    const serviceID = import.meta.env.SERVICE_EMAIL_ID; // Replace with your actual Service ID
-    const templateID = import.meta.env.TEMPLATE_EMAIL_ID; // Replace with your actual Template ID
-    const publicKey = import.meta.env.EMAIL_PUBLIC_KEY; // Replace with your actual Public Key
+    const serviceID = import.meta.env.VITE_SERVICE_EMAIL_ID; // Replace with your actual Service ID
+    const templateID = import.meta.env.VITE_TEMPLATE_EMAIL_ID; // Replace with your actual Template ID
+    const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY; // Replace with your actual Public Key
 
     emailjs
       .send(serviceID, templateID, formData, publicKey)
