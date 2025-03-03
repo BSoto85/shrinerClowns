@@ -6,7 +6,10 @@ const NavBar = () => {
       <div className="container-fluid">
         {/* Navbar Brand on the Left */}
         <a className="navbar-brand" href="#">
-          <img src="src/assets/klownlogo.png" alt="Klowns Logo" />
+          <img
+            src="https://res.cloudinary.com/dnqfg86zq/image/upload/v1741024689/fi5pjmts7psqo2qckna1.png"
+            alt="Klowns Logo"
+          />
         </a>
 
         {/* Navbar Toggler Button for Mobile */}
