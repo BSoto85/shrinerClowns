@@ -14,7 +14,7 @@ function App() {
       <Banner />
       <MeetTheClowns />
       <Carousel />
-      {/* <EventForm /> */}
+      <EventForm />
     </>
   );
 }

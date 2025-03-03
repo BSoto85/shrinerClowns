@@ -12,7 +12,23 @@ const EventForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // send email logic
+
+    // Your EmailJS Service Details
+    const serviceID = import.meta.env.SERVICE_EMAIL_ID; // Replace with your actual Service ID
+    const templateID = import.meta.env.TEMPLATE_EMAIL_ID; // Replace with your actual Template ID
+    const publicKey = import.meta.env.EMAIL_PUBLIC_KEY; // Replace with your actual Public Key
+
+    emailjs
+      .send(serviceID, templateID, formData, publicKey)
+      .then((response) => {
+        console.log("Email sent successfully!", response.status, response.text);
+        alert("Your message has been sent!");
+      })
+      .catch((err) => {
+        console.error("Failed to send email.", err);
+        alert("Error sending email. Please try again.");
+      });
+
     setFormData({
       email: "",
       fName: "",
@@ -24,7 +40,7 @@ const EventForm = () => {
   };
 
   const handleTextChange = (e) => {
-    setFormData({ [e.target.id]: e.target.value });
+    setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
   return (

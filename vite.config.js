@@ -15,6 +15,8 @@ export default defineConfig({
       "localhost",
       "127.0.0.1", // Also allows access via IP
       "pyramid-shriner-klowns-x65un.ondigitalocean.app", // Your DigitalOcean URL
+      "pyramidklowns.com",
+      "www.pyramidklowns.com",
     ],
   },
 });
