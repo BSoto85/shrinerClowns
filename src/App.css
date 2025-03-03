@@ -42,6 +42,14 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .klowns-container h3 {
+    margin-bottom: 5px;
+    margin-top: 20px;
+  }
+
+  .klowns-container {
+    padding-top: 0;
+  }
 }
 
 .carousel-container {

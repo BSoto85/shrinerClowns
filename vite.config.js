@@ -5,12 +5,16 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: "0.0.0.0", // Ensures Vite is accessible externally
-    port: 8080, // DigitalOcean expects port 8080
+    host: "localhost", // Allows access via localhost
+    port: 5173, // Vite default port (change if needed)
   },
   preview: {
     host: "0.0.0.0",
-    port: 8080,
-    allowedHosts: ["pyramid-shriner-klowns-x65un.ondigitalocean.app"], // Add your DigitalOcean URL
+    port: 8080, // Vite's preview mode runs on a different port
+    allowedHosts: [
+      "localhost",
+      "127.0.0.1", // Also allows access via IP
+      "pyramid-shriner-klowns-x65un.ondigitalocean.app", // Your DigitalOcean URL
+    ],
   },
 });
