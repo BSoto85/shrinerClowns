@@ -8,7 +8,7 @@ const carouselImages = [
     desc: "Klowns and girls",
   },
   {
-    url: "https://res.cloudinary.com/dnqfg86zq/image/upload/c_scale,w_350/v1740963494/z9dqbblmaz7w0p1xyzh1.jpg",
+    url: "https://res.cloudinary.com/dnqfg86zq/image/upload/c_scale,w_600/v1741027061/lt0djh72z74ywghfzg3f.jpg",
     desc: "Klowns and family",
   },
 ];
