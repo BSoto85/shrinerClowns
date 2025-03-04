@@ -5,13 +5,16 @@ import carouselImages from "../assets/carouselImages";
 
 const Carousel = () => {
   return (
-    <div className="carousel-container">
-      <h2>Gallery</h2>
+    <div
+      className="carousel-container d-flex flex-column justify-content-center align-items-center"
+      id="carousel"
+    >
+      <h2 className="text-center">Gallery</h2>
       <div
         id="carouselExampleAutoplaying"
-        className="carousel slide w-50 mx-auto"
+        className="carousel slide mx-auto gallery"
         data-bs-ride="carousel"
-        data-bs-interval="4000" // Slides every 3 seconds
+        data-bs-interval="4000"
       >
         <div className="carousel-inner">
           <div className="carousel-item active">

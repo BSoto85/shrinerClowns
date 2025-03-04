@@ -5,7 +5,8 @@ const EventForm = () => {
     email: "",
     fName: "",
     lName: "",
-    event: "",
+    phone: "",
+    eventDetails: "",
     eventAddress: "",
     eventDate: "",
   });
@@ -13,10 +14,9 @@ const EventForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Your EmailJS Service Details
-    const serviceID = import.meta.env.VITE_SERVICE_EMAIL_ID; // Replace with your actual Service ID
-    const templateID = import.meta.env.VITE_TEMPLATE_EMAIL_ID; // Replace with your actual Template ID
-    const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY; // Replace with your actual Public Key
+    const serviceID = import.meta.env.VITE_SERVICE_EMAIL_ID;
+    const templateID = import.meta.env.VITE_TEMPLATE_EMAIL_ID;
+    const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 
     emailjs
       .send(serviceID, templateID, formData, publicKey)
@@ -33,7 +33,8 @@ const EventForm = () => {
       email: "",
       fName: "",
       lName: "",
-      event: "",
+      phone: "",
+      eventDetails: "",
       eventAddress: "",
       eventDate: "",
     });
@@ -45,17 +46,35 @@ const EventForm = () => {
 
   return (
     <div className="container d-flex justify-content-center" id="form">
-      <div
-        className="w-60 border border-1 border-dark p-4 rounded mt-3 mb-3"
-        style={{
-          width: "60%",
-          marginTop: "50px",
-          marginBottom: "50px",
-          background: "white",
-        }}
-      >
+      <div className="border border-1 border-dark p-4 rounded mt-3 mb-3 form-container">
         <h2 className="text-center">Booking Inquiries</h2>
         <form onSubmit={handleSubmit}>
+          <div className="d-flex flex-direction-row gap-5 name-container justify-content-center">
+            <div className="mb-3">
+              <label htmlFor="first-name" className="form-label">
+                First Name
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="fName"
+                value={formData.fName}
+                onChange={handleTextChange}
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="last-name" className="form-label">
+                Last Name
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="lName"
+                value={formData.lName}
+                onChange={handleTextChange}
+              />
+            </div>
+          </div>
           <div className="mb-3">
             <label htmlFor="email" className="form-label">
               Email address
@@ -69,38 +88,26 @@ const EventForm = () => {
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="first-name" className="form-label">
-              First Name
+            <label htmlFor="phone" className="form-label">
+              Phone
             </label>
             <input
               type="text"
               className="form-control"
-              id="fName"
-              value={formData.fName}
+              id="phone"
+              value={formData.phone}
               onChange={handleTextChange}
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="last-name" className="form-label">
-              Last Name
+            <label htmlFor="eventDetails" className="form-label">
+              Event Details
             </label>
-            <input
+            <textarea
               type="text"
               className="form-control"
-              id="lName"
-              value={formData.lName}
-              onChange={handleTextChange}
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="event" className="form-label">
-              Event
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="event"
-              value={formData.event}
+              id="eventDetails"
+              value={formData.eventDetails}
               onChange={handleTextChange}
             />
           </div>

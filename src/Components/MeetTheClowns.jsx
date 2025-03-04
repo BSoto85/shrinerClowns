@@ -5,8 +5,8 @@ import klownImages from "../assets/klownImages";
 
 const MeetTheClowns = () => {
   return (
-    <div className="klowns-container">
-      <h2 id="klowns">Meet the Klowns</h2>
+    <div className="klowns-container" id="klowns">
+      <h2>Meet the Klowns</h2>
       <div className="klowns">
         {klownImages.map((image, i) => {
           return (
